@@ -1,0 +1,20 @@
+{
+  "name": "cypress-web-ui",
+  "version": "1.0.0",
+  "description": "Demonstration of Cypress usage on Web UI Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "test",
+    "automation",
+    "e2e"
+  ],
+  "author": "Samir Ferreira",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^8.0.0"
+  }
+}
