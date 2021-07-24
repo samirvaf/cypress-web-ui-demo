@@ -23,9 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+const login = require("./locators/LoginPage").LOCATORS
 
 Cypress.Commands.add('login', (username, password) => {
-    cy.get('#user-name').clear().type(username)
-    cy.get('#password').clear().type(password)
-    cy.get('#login-button').click()
+    if (username) cy.get(login.usernameField).clear().type(username)
+    if (password) cy.get(login.passwordField).clear().type(password)
+    cy.get(login.logInBtn).click()
 })
